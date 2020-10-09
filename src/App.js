@@ -36,6 +36,7 @@ class App extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
       route: 'Signin', 
+<<<<<<< HEAD
       isSignedIn: false,
       user: {
         id: '',
@@ -50,17 +51,10 @@ class App extends React.Component {
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
 =======
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
+=======
+      isSignedIn: false
+>>>>>>> parent of c47946a... connnecting the backEnd without Databases
     }
-  }
-
-  loadUser = (data) => {
-    this.setState({user: {
-      id: data.id,
-      name: data.name, 
-      email: data.email,
-      entries : data.entries,
-      joined: data.joined
-    }})
   }
 
   calculateFaceLocation= (data) => {
@@ -86,23 +80,7 @@ class App extends React.Component {
       Clarifai.FACE_DETECT_MODEL,
       this.state.input
       )
-      .then(response => {
-        if(response) {
-          fetch('http://localhost:3001/image', {
-            method: 'put',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-              id: this.state.user.id
-            })
-        })
-          .then(response => response.json())
-          .then(count => {
-            this.setState(Object.assign(this.state.user, {entries: count}))
-          })
-
-      }
-        this.displayFaceBox(this.calculateFaceLocation(response))
-      })
+      .then(response => this.displayFaceBox(this.calculateFaceLocation(response)))        
       .catch(err => console.log(err));
   }
 
@@ -124,7 +102,7 @@ class App extends React.Component {
         { this.state.route === 'home' 
           ?<div>
               <Logo/>
-              <Rank  name={this.state.user.name} entries={this.state.user.entries}/>
+              <Rank/>
               <ImageLinkForm 
                 onInputChange={this.onInputChange} 
                 onSubmit={this.onSubmit}
@@ -132,8 +110,8 @@ class App extends React.Component {
               <FaceRecognition box={this.state.box} imageUrl= {this.state.imageUrl}/>
           </div> 
           :(this.state.route === 'Signin'  
-            ?<Signin loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
-            :<Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/> 
+            ?<Signin onRouteChange={this.onRouteChange}/>
+            :<Register onRouteChange={this.onRouteChange}/> 
           )         
         }
         </div>
