@@ -33,6 +33,7 @@ class App extends React.Component {
       imageUrl: '',
       box: {},
 <<<<<<< HEAD
+<<<<<<< HEAD
       route: 'Signin', 
       isSignedIn: false,
       user: {
@@ -42,6 +43,8 @@ class App extends React.Component {
         entries : 0,
         joined: ''
       }
+=======
+>>>>>>> parent of 31f92be... added the forms BACKEND officially done
 =======
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
     }
@@ -112,6 +115,7 @@ class App extends React.Component {
           params={particlesOptions}
         />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
         { this.state.route === 'home' 
           ?<div>
@@ -130,6 +134,8 @@ class App extends React.Component {
         }
         </div>
 =======
+=======
+>>>>>>> parent of 31f92be... added the forms BACKEND officially done
         <Navigation />
         <Logo/>
         <Rank/>
@@ -139,6 +145,9 @@ class App extends React.Component {
         />
         <FaceRecognition box={this.state.box} imageUrl= {this.state.imageUrl}/>
       </div>
+<<<<<<< HEAD
+>>>>>>> parent of 31f92be... added the forms BACKEND officially done
+=======
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
     );
   }
