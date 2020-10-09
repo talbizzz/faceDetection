@@ -35,6 +35,7 @@ class App extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       route: 'Signin', 
 <<<<<<< HEAD
       isSignedIn: false,
@@ -54,6 +55,8 @@ class App extends React.Component {
 =======
       isSignedIn: false
 >>>>>>> parent of c47946a... connnecting the backEnd without Databases
+=======
+>>>>>>> parent of 31f92be... added the forms BACKEND officially done
     }
   }
 
@@ -98,6 +101,7 @@ class App extends React.Component {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Navigation isSignedIn={this.state.isSignedIn} onRouteChange={this.onRouteChange}/>
         { this.state.route === 'home' 
           ?<div>
@@ -120,6 +124,8 @@ class App extends React.Component {
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
 =======
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
+=======
+>>>>>>> parent of 31f92be... added the forms BACKEND officially done
         <Navigation />
         <Logo/>
         <Rank/>
@@ -131,6 +137,9 @@ class App extends React.Component {
       </div>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 31f92be... added the forms BACKEND officially done
+=======
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
 =======
 >>>>>>> parent of 31f92be... added the forms BACKEND officially done
